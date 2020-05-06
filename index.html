@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name='author' content="dafsic@gmail.com">
+    <meta name='description' content="golang notes">
+    <meta name="viewport" content="width=device-width">
+    <title>My test page</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+  </head>
+
+  <body>
+ 
+    <div id="header"></div>
+    <script>
+          $("#header").load("header.html");
+    </script>
+
+    <main>
+      <article class="bloglist">
+        <h2>Recent Blogs</h2>
+        <section class="blogs">
+            <a href="2019-01-14-atomicValue.html" target="_blank"><h2>无锁编程--atomic.Value</h2></a>
+            <p>多个goroutine都会读写同一个对象时，必然会有竞争。读写锁或者互斥锁就是解决这种问题的终极方法，但同时性能也是最差的，go在atomic库提供了Value这个类型，实现无锁操作。</p>
+        </section>
+        <section class="blogs">
+            <a href="2019-01-16-find-global-var.html" target="_blank"><h2>如何在二进制文件中查找全局变量的值</h2></a>
+            <p>从二进制文件中找出一个初始化了的全局变量的值。</p>
+            <p>lg<sup>8</sup> = 3</p>
+            <p>二氧化碳 co<sub>2</sub></p>
+            <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+        </section>
+      </article>
+
+      <aside>
+        <h2>aside bar</h2>
+        <ul> 
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">github</a></li>
+        </ul>
+      </aside>
+
+    
+    </main>
+
+    <div id="footer"></div>
+      <script>
+            $("#footer").load("footer.html");
+      </script>
+      <script src="scripts/main.js"></script> 
+
+  </body>
+</html>
